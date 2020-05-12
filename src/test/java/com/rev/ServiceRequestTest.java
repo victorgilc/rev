@@ -1,16 +1,18 @@
 package com.rev;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
 public class ServiceRequestTest {
-    ServiceRequest o = new ServiceRequest();
+    Request o = new Request();
 
-    @Test(expected = RuntimeException.class)
+    @Test
     public void a(){
-        String serviceType = null;
-        // o.findProfessional(serviceType);
+       Request entry = new Request();
+    Request request =  o.create(entry);
+       Assert.assertTrue(request!=null);
     }
 }

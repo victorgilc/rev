@@ -1,9 +1,9 @@
-Pedido Novo
+Pedido
 	Serviço
-		Devemos procurar um profissional qualificado e disponível em determinado raio da localização do requerente (até 10 km por padrão), 
+		Devemos procurar um profissional qualificado e disponível em determinado raio da localização do requerente - até 10 km por padrão(parâmetro), 
 		e o seleciona confome disponbilidade do profissional e disponibilidade do requerente.
 		
-	Multiplo serviços
+	Multiplos serviços
 		Serviços que precisam ser executados em determinado local e em tempo paralelo ou em horários e/ou dias  próximos, ou até mesmo em sequência, 
 		devem seguir os mesmos principios de um único pedido, mas tendo sua existência/admissão condicionada ao preenchimento de todos os recursos
 		
