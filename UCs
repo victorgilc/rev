@@ -1,2 +1,60 @@
 Pedido Novo
-	Procura um profissional disponível na cidade 
+	Serviço
+		Devemos procurar um profissional qualificado e disponível em determinado raio da localização do requerente (até 10 km por padrão), 
+		e o seleciona confome disponbilidade do profissional e disponibilidade do requerente.
+		
+	Multiplo serviços
+		Serviços que precisam ser executados em determinado local e em tempo paralelo ou em horários e/ou dias  próximos, ou até mesmo em sequência, 
+		devem seguir os mesmos principios de um único pedido, mas tendo sua existência/admissão condicionada ao preenchimento de todos os recursos
+		
+	Produto
+		O produto deve ser disponibilizado ao requerente em local próximo de sua localização, no menor tempo possível ou em horário agendado.
+		Da entrega: A entrega nada mais é do que a combinação de serviço(entrega) anexado a um produto; podendo assim ser tratada:
+			-Separadamente: Há uma requisição de produto e outra requisição para captura e entrega desse produto(serviço)
+			-Acoplado: O pedido já é realizado com a premissa de que haverá entrega, o que é apenas um atalho para facilitação ao requerente,
+			tendo em vista que deve ser gerado 2 requisições do mesmo jeito(produto + serviço)
+	Demanda
+		Relação entre disponibilidade e requisições ao longo do tempo.
+		A livre requisição de serviços e produtos eventualmente pode gerar uma demanda demasiada alta.
+		Isso não é um problema se as requisições forem adequadas e justas para as necessidades do individuo, nesse caso o número de profissionais/produtos deverá aumentar, mesmo que não imediatamente, o mais rapido possível.		
+		Todavia, se considerarmos que a partir do momento que um único elemento passar a criar requisições sem limite, essas requisições devem ser barradas.
+		
+		Diante disso, há de se existir um mecanismo para que essa demanda seja controlada e justa para todos os usuários do sistema, inclusive os fornecedores:
+		
+		Considerando:
+		
+		Produto: Refeição
+		
+		(MRT) Maximum response time - tempo máximo de resposta  = 1 hora
+		(MAR) Maximum amount per hour = quantidade máxima por hora = 30
+		
+		Se recebermos mais de 30 requisições por hora, definitivamente a garantia de entrega está comprometida, assim, temos 2 opções:
+			Barrar novas requisições de pedido e direcionar para outro estabelecimento mais proximo.
+				Se sairmos do raio de localização a requisição pode ser cancelada se
+				 -após um feedback do usuário apontando um profissional que possa lhe atender fora do raio de localização não for aceito.
+				 -o usuário não aceitar o atraso.
+				 -nenhum estabelecimento arcar com o excesso de requisição
+				 
+		Todo evento de estouro de demanda, caracterizado pelo excesso da quantidade maxima por hora, deve ser contabilizado, de tal forma que se considerarmos
+			total de requisições versus demanda estourada, essa relação não pode estravazar (parâmetro)80% no perído de (parâmetro)1 mês
+
+Profissionais
+	De inicio um profissional deverá selecionar suas opções e prioridades para sua ocupação, por exemplo:
+	
+		1 - Biologo
+		2 - Biomedico
+		3 - Vendedor
+		4 - Medico
+		
+	Apesar de respeitar a decisão do individuo, deve-se selecionar e treinar o profissional mais necessário considerando a demanda
+	em periodo de tempo X, por exemplo:
+	
+	Há um deficit de medicos, mesmo que as 3 primeiras opções não sejam medicos, esse individuo devera ser treinado como medico a priori, mesmo
+	porque ele selecionou essa opção.
+	
+	
+	
+	
+	
+	
+	
