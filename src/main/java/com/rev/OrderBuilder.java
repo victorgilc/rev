@@ -1,10 +1,10 @@
 package com.rev;
 
-import org.springframework.web.servlet.function.RenderingResponse.Builder;
-
 import lombok.Getter;
 import lombok.Setter;
 
+@Getter 
+@Setter
 public class OrderBuilder {
     private String nomeProduto;
     private Integer quantidade;
