@@ -2,8 +2,8 @@ package com.rev;
 
 public class Request {
 
-	public Request create(Request entry) {
-		return new Request();
+	public com.rev.data.structure.Request create(com.rev.data.structure.Request entry) {
+		return new com.rev.data.structure.Request();
 	}
 	
 	// public void findProfessional(String type) {

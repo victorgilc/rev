@@ -11,5 +11,4 @@ public class Request {
     private Person requestor;
     private Person provider;
     private LocalDateTime raise;
-
 }
