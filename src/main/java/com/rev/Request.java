@@ -1,18 +1,18 @@
 package com.rev;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.rev.data.PersonData;
+import com.rev.data.structure.Person;
+
 public class Request {
+	
+	@Autowired
+	private PersonData personData;
 
-	public com.rev.data.structure.Request create(com.rev.data.structure.Request entry) {
-		return new com.rev.data.structure.Request();
+	public void create(com.rev.data.structure.Request entry) {
+		List<Person> personList = personData.findPersonPerOccupation(null);
 	}
-	
-	// public void findProfessional(String type) {
-	
-	// }
-
-	// private boolean isValidParameters(String type, LocalDateTime initialDateTime, LocalDateTime finalDateTime) {
-	// 	return type == null ||
-	// 	 initialDateTime == null || 
-	// 	 finalDateTime == null;
-	// }
 }
